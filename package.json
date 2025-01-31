@@ -1,0 +1,43 @@
+{
+  "name": "@reactive-cache/cookie",
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "test": "npx tsc && tsx watch src/test.ts && echo 'all tests are complete!'",
+    "prepare": "npx tsc && rm -f ./dist/test.js"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "axios": "^1.7.9",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@reactive-cache/core": "^2.4.0",
+    "js-cookie": "^3.0.5",
+    "rxjs": "^7.8.1"
+  },
+  "description": "reactive cookies for angular and rxjs projects",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jor-ban/reactive-cache.git"
+  },
+  "keywords": [
+    "angular",
+    "rxjs",
+    "signal",
+    "cache",
+    "state-manager",
+    "state",
+    "reactive",
+    "cookies"
+  ],
+  "author": "https://github.com/Jor-ban",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jor-ban/reactive-cache/issues"
+  },
+  "homepage": "https://github.com/Jor-ban/reactive-cache#readme"
+}
