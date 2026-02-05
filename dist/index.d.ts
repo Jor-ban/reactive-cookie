@@ -1,9 +1,9 @@
 
-import {CookieAttributes} from 'js-cookie';
+import Cookies from 'js-cookie';
 import {Observable} from "rxjs";
 import {UpdateRecourseType} from "@reactive-cache/core";
 
-export type ReactiveCookieAttributes = CookieAttributes & {
+export type ReactiveCookieAttributes = Cookies.CookieAttributes & {
   clearingOffsetMs?: number
 }
 export type ReactiveCookie<T> = Observable<T> & {
@@ -13,5 +13,8 @@ export type ReactiveCookie<T> = Observable<T> & {
   reset(): void;
 }
 
-export function reactiveCookie<T>(name: string, updateResource: UpdateRecourseType<T>, expires?: Date | number): ReactiveCookie<T> {}
-reactiveCookie.temporal = function<T>(name: string, updateResource: UpdateRecourseType<T>): ReactiveCookie<T> {}
+export declare function reactiveCookie<T>(name: string, updateResource: UpdateRecourseType<T>, expires?: Date | number): ReactiveCookie<T>;
+
+export declare namespace reactiveCookie {
+  function temporal<T>(name: string, updateResource: UpdateRecourseType<T>): ReactiveCookie<T>;
+}
