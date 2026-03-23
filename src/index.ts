@@ -53,6 +53,7 @@ export function reactiveCookie<T>(name: string, updateResource: UpdateRecourseTy
     refresh,
     reset: () => {
       clearTimeout(timer);
+      Cookies.remove(name)
       rc.resetState()
     }
   })

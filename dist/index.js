@@ -32,6 +32,7 @@ export function reactiveCookie(name, updateResource, expires) {
         refresh,
         reset: () => {
             clearTimeout(timer);
+            Cookies.remove(name);
             rc.resetState();
         }
     });
